@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 
 public class MainActivity extends ActionBarActivity {
     private TextView lblFahrenheit;
@@ -49,7 +51,7 @@ public class MainActivity extends ActionBarActivity {
         try {
             double celsius = Double.parseDouble(txtCelsius.getText().toString());
             double fahrenheit = ((9 / 5) * celsius) + 32;
-            lblFahrenheit.setText(Double.toString(fahrenheit));
+            lblFahrenheit.setText(new DecimalFormat("#.##").format(fahrenheit));
         } catch (NumberFormatException e) {
             Toast
                     .makeText(this, "Please enter a number", Toast.LENGTH_LONG)

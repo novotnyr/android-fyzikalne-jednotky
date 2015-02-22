@@ -7,6 +7,11 @@
     android:orientation="vertical"
     >
 
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Celsius:" />
+
     <EditText
         android:id="@+id/txtCelsius"
         android:layout_width="fill_parent"
@@ -15,7 +20,16 @@
         />
 
     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Fahrenheit:" />
+
+    <TextView
         android:id="@+id/lblFahrenheit"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        style="@android:style/TextAppearance.Large"
+        android:hint="N/A"
+        />
 </LinearLayout>
